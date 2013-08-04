@@ -63,7 +63,7 @@ exactly the same mechanism that dokku-client uses internally, that of entry poin
 provided by ``setuptools``.
 
 First, create a python package. You may have your own favorite way of doing this, but I 
-use seed:
+use seed_:
 
 .. code-block:: bash
     
@@ -104,3 +104,4 @@ Once done, you can release your package to PyPi using ``seed release --initial``
 .. _Dokku: https://github.com/progrium/dokku
 .. _docopt: http://docopt.org/
 .. _prompt command: https://github.com/adamcharnock/dokku-client/blob/master/dokku_client/commands/prompt.py
+.. _seed: https://github.com/adamcharnock/seed
