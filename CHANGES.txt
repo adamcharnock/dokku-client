@@ -3,3 +3,8 @@ Change-log for dokku-client.
 This file will be added to as part of each release
 
 ----
+
+Version 0.1.0 (first version), Sun 04 Aug 2013
+===============================================
+
+
