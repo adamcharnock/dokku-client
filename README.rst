@@ -2,7 +2,7 @@ Heroku-like command line interface for Dokku
 ============================================
 
 **Note:** This project is in the very early stages of development. 
-You can help by adding commands (see below)
+You can help by adding commands (see below).
 
 Installation
 ------------
@@ -75,7 +75,9 @@ use seed:
     ls
 
 Second, create a class which extends ``dokku_client.BaseCommand`` and implements the method
-``main(args)``. See the `prompt command`_ for an example.
+``main(args)``. Also, the doc-block at the top 
+of the class will be used by docopt_ to parse any command line arguments, so make 
+sure you include that. See the `prompt command`_ for an example.
 
 And third, in your new ``setup.py`` file, specify your new class as an entry point:
 
