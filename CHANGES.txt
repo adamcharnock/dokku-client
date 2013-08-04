@@ -4,6 +4,12 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.2.2, Mon 05 Aug 2013
+===============================
+
+eab285dd72	Adding restart command (Adam Charnock)
+
+
 Version 0.2.1, Mon 05 Aug 2013
 ===============================
 
