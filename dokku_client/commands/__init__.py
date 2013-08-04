@@ -6,6 +6,7 @@ from dokku_client.command_tools import global_opts_doc
 
 class BaseCommand(object):
     check_config = True
+    sort_order = 10
 
     def __init__(self, name):
         self._name = name

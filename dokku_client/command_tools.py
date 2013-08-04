@@ -8,6 +8,7 @@ def load_commands():
         command_class = entry_point.load()
         command = command_class(name=entry_point.name)
         commands.append(command)
+    commands = sorted(commands, key=lambda c: (c.sort_order, c.name))
     return commands
 
 def command_list_doc(commands=None):

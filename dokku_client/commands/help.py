@@ -11,6 +11,7 @@ class HelpCommand(BaseCommand):
         dokku-client help [COMMAND]
     """
     check_config = False
+    sort_order = 5
     
     def main(self):
         if not self.args['COMMAND']:
