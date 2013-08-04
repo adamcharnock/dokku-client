@@ -1,5 +1,5 @@
-Heroku-like command line interface for Dokku
-============================================
+Heroku-like command line interface for `Dokku`_
+===============================================
 
 **Note:** This project is in the very early stages of development. 
 You can help by adding commands (see below).
@@ -102,5 +102,6 @@ run ``dokku-client help`` to check.
 
 Once done, you can release your package to PyPi using ``seed release --initial``.
 
+.. _Dokku: https://github.com/progrium/dokku
 .. _docopt: http://docopt.org/
 .. _prompt command: https://github.com/adamcharnock/dokku-client/blob/master/dokku_client/commands/prompt.py
