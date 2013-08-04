@@ -54,3 +54,18 @@ Produces:
         help    Show this help message
 
     See 'git help <command>' for more information on a specific command.
+
+Contributing new commands
+-------------------------
+
+Dokku-client allows any developer to hook in extra commands. This is done using 
+exactly the same mechanism that dokku-client uses internally.
+
+First, create a class which extends ``dokku_client.BaseCommand`` and implements the method
+``main(args)``. See the `prompt command`_ for an example.
+
+
+
+
+.. _docopt: http://docopt.org/
+.. _prompt command: https://github.com/adamcharnock/dokku-client/blob/master/dokku_client/commands/prompt.py
