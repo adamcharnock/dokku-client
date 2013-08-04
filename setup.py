@@ -25,6 +25,7 @@ setup(
             'help = dokku_client.commands.help:HelpCommand',
             'configset = dokku_client.commands.config:ConfigSetCommand',
             'configget = dokku_client.commands.config:ConfigGetCommand',
+            'restart = dokku_client.commands.restart:RestartCommand',
         ],
         'console_scripts': [
             'dokku-client = dokku_client.client:main',
