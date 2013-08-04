@@ -44,14 +44,15 @@ def main():
         command_args = apply_defaults(command_args)
         if command.check_config:
             # Sanity check the config
-            if not command_args['--host']:
+            if not command_args.get('--host', None):
                 sys.stderr.write("Could not determine host. Specify --host or set DOKKU_HOST.\n")
                 exit(1)
-            if not command_args['--app']:
+            if not command_args.get('--app', None):
                 sys.stderr.write("Could not determine app. Specify --app or set DOKKU_APP.\n")
                 exit(1)
         # Ok, let's run the command
-        command.main(command_args)
+        command.args = command_args
+        command.main()
 
 if __name__ == '__main__':
     main()

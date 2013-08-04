@@ -12,8 +12,8 @@ class PromptCommand(BaseCommand):
         [[include global options]]
     """
     
-    def main(self, args):
-        cmd = 'docker run -i -t app/%s /bin/bash' % args['--app']
-        call_args = ['ssh', '-t', args['--host'], cmd]
+    def main(self):
+        cmd = 'docker run -i -t app/%s /bin/bash' % self.args['--app']
+        call_args = ['ssh', '-t', self.args['--host'], cmd]
         print "Running command: %s" % ' '.join(call_args)
         call(call_args)

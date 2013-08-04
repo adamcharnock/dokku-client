@@ -1,13 +1,16 @@
 import re
 
+from sarge import capture_stdout, run
+
 from dokku_client.command_tools import global_opts_doc
 
 class BaseCommand(object):
     check_config = True
 
-    def __init__(self, name, *args, **kwargs):
-        super(BaseCommand, self).__init__(*args, **kwargs)
+    def __init__(self, name):
         self._name = name
+        # Set externally in client.py
+        self.args = {}
 
     @property
     def doc(self):
@@ -34,3 +37,11 @@ class BaseCommand(object):
 
     def main(self, global_args, command_args):
         raise NotImplementedError('Implement the main() method to implement your command')
+
+    def run_remote(self, cmd, input=None):
+        host = self.args['--host']
+        return capture_stdout('ssh %s -- %s' % (host, cmd), input=input)
+
+    def restart_container(self):
+        app = self.args['--app']
+        self.run_remote('docker restart `cat /home/git/%s/CONTAINER`' % app)

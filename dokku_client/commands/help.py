@@ -12,11 +12,11 @@ class HelpCommand(BaseCommand):
     """
     check_config = False
     
-    def main(self, args):
-        if not args['COMMAND']:
+    def main(self):
+        if not self.args['COMMAND']:
             print root_doc()
         else:
-            command = command_by_name(args['COMMAND'])
+            command = command_by_name(self.args['COMMAND'])
             if not command:
                 sys.stderr.write("Unknown command. Use 'dokku-client help' for list of commands.\n")
             else:
