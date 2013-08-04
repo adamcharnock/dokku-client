@@ -59,13 +59,46 @@ Contributing new commands
 -------------------------
 
 Dokku-client allows any developer to hook in extra commands. This is done using 
-exactly the same mechanism that dokku-client uses internally.
+exactly the same mechanism that dokku-client uses internally, that of entry points
+provided by ``setuptools``.
 
-First, create a class which extends ``dokku_client.BaseCommand`` and implements the method
+First, create a python package. You may have your own favorite way of doing this, but I 
+use seed:
+
+.. code-block:: bash
+    
+    mkdir dokku-client-mycommand
+    cd dokku-client-mycommand
+    pip install seed
+    mkdir dokku_client_mycommand
+    seed create -f --name dokku_client_mycommand
+    ls
+
+Second, create a class which extends ``dokku_client.BaseCommand`` and implements the method
 ``main(args)``. See the `prompt command`_ for an example.
 
+And third, in your new ``setup.py`` file, specify your new class as an entry point:
 
+.. code-block:: python
 
+    entry_points={
+        'dokku_client.commands': [
+            'mycommand = dokku_client_mycommand.mycommand:MyCommand',
+        ],
+    }
+
+Run ``setup.py`` so that the new entry point is initialized:
+
+.. code-block:: bash
+    
+    # Run in develop mode, so files will not be copied away.
+    # You can continue to edit your code as usual
+    python setup.py develop
+
+You should now find that your new command is available in dokku-client, 
+run ``dokku-client help`` to check.
+
+Once done, you can release your package to PyPi using ``seed release --initial``.
 
 .. _docopt: http://docopt.org/
 .. _prompt command: https://github.com/adamcharnock/dokku-client/blob/master/dokku_client/commands/prompt.py
