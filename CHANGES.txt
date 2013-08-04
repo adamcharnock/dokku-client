@@ -4,6 +4,21 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.2.0, Mon 05 Aug 2013
+===============================
+
+6193973edb	Adding config (environment) management commands (Adam Charnock)
+d8cccbdf5e	Slight refactoring and adding utilities to BaseCommand (Adam Charnock)
+f9d87ab810	Adding link to seed in readme (Adam Charnock)
+2a1fafdd3e	updating readme for latest seed changes (Adam Charnock)
+bdf991d3c3	Adding link to Readme to Dokku (Adam Charnock)
+698d616153	readme updates (Adam Charnock)
+35a51783e7	adding docs on command creation (Adam Charnock)
+8340a4a7fa	adding docs on command creation (Adam Charnock)
+945baa983a	Adding content to readme (Adam Charnock)
+422b7d6b18	Adding /dist to gitignore (Adam Charnock)
+
+
 Version 0.1.0 (first version), Sun 04 Aug 2013
 ===============================================
 
