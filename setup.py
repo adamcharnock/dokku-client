@@ -23,6 +23,8 @@ setup(
         'dokku_client.commands': [
             'prompt = dokku_client.commands.prompt:PromptCommand',
             'help = dokku_client.commands.help:HelpCommand',
+            'configset = dokku_client.commands.config:ConfigSetCommand',
+            'configget = dokku_client.commands.config:ConfigGetCommand',
         ],
         'console_scripts': [
             'dokku-client = dokku_client.client:main',
