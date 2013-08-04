@@ -70,8 +70,7 @@ use seed:
     mkdir dokku-client-mycommand
     cd dokku-client-mycommand
     pip install seed
-    mkdir dokku_client_mycommand
-    seed create -f --name dokku_client_mycommand
+    seed create
     ls
 
 Second, create a class which extends ``dokku_client.BaseCommand`` and implements the method
