@@ -50,8 +50,11 @@ Produces:
 
     full list of available commands:
 
-        prompt  Open a prompt
-        help    Show this help message
+        help       Show this help message
+        configget  Set one or more config options
+        configset  Set one or more config options in the app's ENV file
+        prompt     Open a prompt
+        restart    Restart the container
 
     See 'git help <command>' for more information on a specific command.
 
