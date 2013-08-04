@@ -4,6 +4,12 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.2.1, Mon 05 Aug 2013
+===============================
+
+7aee95dd9f	Displaying commands in a more rational order (Adam Charnock)
+
+
 Version 0.2.0, Mon 05 Aug 2013
 ===============================
 
