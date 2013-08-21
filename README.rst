@@ -4,6 +4,12 @@ Heroku-like command line interface for `Dokku`_
 **Note:** This project is in the very early stages of development. 
 You can help by adding commands (see below).
 
+.. image:: https://badge.fury.io/py/dokku-client.png
+    :target: https://badge.fury.io/py/dokku-client
+
+.. image:: https://pypip.in/d/dokku-client/badge.png
+    :target: https://pypi.python.org/pypi/dokku-client
+
 Installation
 ------------
 
