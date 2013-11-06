@@ -18,6 +18,7 @@ setup(
     long_description=open('README.rst').read() if exists("README.rst") else "",
     install_requires=[
         'docopt>=0.6.1',
+        'sarge==0.1.1'
     ],
     entry_points={
         'dokku_client.commands': [
