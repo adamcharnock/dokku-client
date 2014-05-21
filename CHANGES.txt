@@ -4,6 +4,14 @@ This file will be added to as part of each release
 
 ----
 
+Version 0.2.3, Wed 21 May 2014
+===============================
+
+9bbd06be4c	Install sarge as dependency. (Adam)
+00602db1ff	Adding badges to readme (Adam Charnock)
+4269c36f9a	updating commands in readme (Adam Charnock)
+
+
 Version 0.2.2, Mon 05 Aug 2013
 ===============================
 
